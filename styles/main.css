@@ -13,10 +13,39 @@ body h1 {
 }
 
 body {
-    width: 80%;
-    margin: 2em;
+    display: grid;
+    grid-template-columns:  repeat(12, 1fr);
+    grid-template-rows: 80px 1fr 1fr 60px;
+    grid-gap: 16px;
+    
+    margin: 1em;
     background-color: white;
-       
+}
+
+header { 
+    grid-row: 1/2;
+    grid-column: 1/span 1; 
+    padding: 1em;  
+}
+
+nav { 
+    grid-row: 1/2; 
+    grid-column: 2/span 8;
+    padding: 2em; 
+}
+
+article {
+    grid-row:2/12;
+    grid-column: 1/span 12;
+    padding: 3em;
+   
+}
+
+article h1 {
+    padding: .5em;
+}
+article p {
+    padding: 0em 0em 0em 1.5em;
 }
 
 .interests_ul{
